@@ -3,63 +3,54 @@
 <html lang="en">
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Navbars 01</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <title>Startup</title>
     <link rel="stylesheet" href="style.css">
-
   </head>
-
   <body>
-
-    <nav class="navbar">
-
-      <div class="logo">
-
-        <i class="fa-solid fa-font-awesome"></i>
-
-        <a href="#">LOGO</a>
-
-      </div>
-
-      <div class="menu">
-
-        <div class="menu-links">
-
-          <a href="#">Home</a>
-
-          <a href="#">About</a>
-
-          <a href="#">Contact</a>
-
-          <a href="#">Blog</a>
-
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">Logo</a>
         </div>
-
-        <button class="log-in">Log In</button>
-
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Services</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#!">Web Design</a>
+                </li>
+                <li>
+                  <a href="#!">Web Development</a>
+                </li>
+                <li>
+                  <a href="#!">Graphic Design</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Pricing</a>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </section>
 
-      <div class="menu-btn">
-
-        <i class="fa-solid fa-bars"></i>
-
-      </div>
-
-    </nav>
-
-  </body>
-
-</html><!--
-    div.elem-group.inlined input {
+   <!-- div.elem-group.inlined input {
         width: 95%;
         display: inline-block;
       }
@@ -74,8 +65,11 @@
         float: left;
         margin-left: 1%;
       }
-            
-    <!-- Script
-    <script src="app.js"></script>
+           --> 
+   
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
+
+
   </body>
 </html>

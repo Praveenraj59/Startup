@@ -4,43 +4,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Us Now</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="booknow.css">
-<!-- Font Awesome Icons -->
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<!-- Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
-rel="stylesheet"
-/>
-<!-- Stylesheet -->
-<link rel="stylesheet" href="style.css" /></head>
+
 <body  >
     <header>
+    <section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">LOGO</a>
+    </div>
     <nav>
-        <a href="#home" id="logo">Site Logo</a>
-        <i class="fas fa-bars" id="ham-menu"></i>
-        <ul id="nav-bar">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">Gallary</a>
-          </li>
-          <li>
-            <a href="#services">Blog</a>
-          </li>
-          <li>
-            <a href="booknow.html">Book us now</a>
-          </li>
-        
-        </ul>
-      </nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+        <li><a href="#!">Home</a></li>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Services</a>
+          <ul class="nav-dropdown">
+            <li><a href="#!">Web Design</a></li>
+            <li><a href="#!">Web Development</a></li>
+            <li><a href="#!">Graphic Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#!">Pricing</a></li>
+        <li><a href="#!">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
     </header>
         
-        <main>
+       <!-- <main>
             <div>
                 <div class="book">
                     <h2>Book Our Services</h2><br>
@@ -58,11 +53,10 @@ rel="stylesheet"
                     </form>
                 </div>
             </div>
-        </main>
+        </main>-->
     
     </body>
-    <script src="app.js"></script>
-
+    
 </body>
 
 </html>

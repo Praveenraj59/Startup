@@ -1,277 +1,164 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-  }
-  html {
-	font-size: 62.5%;
-  }
-  *:not(i) {
-	font-family: "Poppins", sans-serif;
-  }
-  header {
-	position: fixed;
-	width: 100%;
-	background-color: #beccda;
-	padding: 3rem 5rem;
-  }
-  nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 90px;
+
+/* 
+$content-width will be the max width of the content within the navigation bar. 
+$breakpoint determines at which width the media query breakpoint will take effect.
+*/
+*{
+  margin: auto;
 }
-  nav ul {
-	list-style: none;
-	display: flex;
-	gap: 2rem;
-	padding-right: 90px;
-  }
-  nav a {
-	font-size: 1.8rem;
-	text-decoration: none;
-  }
-  nav a#logo {
-	color: #000000;
-	font-weight: 700;
-  }
-  nav ul a {
-	color: #ffffff;
-	font-weight: 600;
-  }
-  nav ul a:hover {
-	border-bottom: 2px solid #ffffff;
-  }
-  section#home {
-	height: 100vh;
-	display: grid;
-	place-items: center;
-  }
-  h1 {
-	font-size: 4rem;
-  }
-  #ham-menu {
-	display: none;
-  }
-  nav ul.active {
-	left: 0;
-  }
-  @media only screen and (max-width: 991px) {
-	html {
-	  font-size: 56.25%;
-	}
-	header {
-	  padding: 2.2rem 5rem;
-	}
-  }
-  @media only screen and (max-width: 767px) {
-	html {
-	  font-size: 50%;
-	}
-	#ham-menu {
-	  display: block;
-	  color: #ffffff;
-	}
-	nav a#logo,
-	#ham-menu {
-	  font-size: 3.2rem;
-	}
-	nav ul {
-	  background-color: black;
-	  position: fixed;
-	  left: -100vw;
-	  top: 73.6px;
-	  width: 100vw;
-	  height: calc(100vh - 73.6px);
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: space-around;
-	  transition: 1s;
-	  gap: 0;
-	}
-  }
-  @media only screen and (max-width: 575px) {
-	html {
-	  font-size: 46.87%;
-	}
-	header {
-	  padding: 2rem 3rem;
-	}
-	nav ul {
-	  top: 65.18px;
-	  height: calc(100vh - 65.18px);
-	}
-  }
-  ----------
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-
-*,
-
-*::before,
-
-*::after {
-
-  box-sizing: border-box;
-
-}
-
 body {
-
+  background-color: #63D6E0;
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
   margin: 0;
-
   padding: 0;
-
-  background-color: #010101;
-
-  font-family: "Ubuntu", sans-serif;
-
 }
-
-a {
-
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #ffffff;
+  color: #463f3f;
   text-decoration: none;
-
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+nav ul li a:hover {
+  background: #f2f2f2;
+  color: #fb5958;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
 }
 
-button {
-
-  border: 0;
-
-  outline: none;
-
-  font-family: inherit;
-
-  font-size: inherit;
-
-  cursor: pointer;
-
-}
-
-.navbar {
-
-  height: 90px;
-
-  background-color: hsl(0, 0%, 10%);
-
-  padding: 20px 40px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-}
-
-.navbar .logo i {
-
-  color: #0aa5ff;
-
-  font-size: 22px;
-
-}
-
-.navbar .logo a {
-
-  font-size: 24px;
-
-  font-weight: 700;
-
-  color: white;
-
-  margin-left: 12px;
-
-}
-
-.menu {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 32px;
-
-}
-
-.menu-links {
-
-  display: flex;
-
-  gap: 24px;
-
-  border-right: 1px solid #999999;
-
-  padding-inline: 24px;
-
-}
-
-.menu-links a {
-
-  font-weight: 500;
-
-  color: #999999;
-
-  padding: 8px 16px;
-
-}
-
-.menu-links a:hover {
-
-  color: white;
-
-}
-
-.log-in {
-
-  font-weight: 500;
-
-  padding: 12px 22px;
-
-  background-color: transparent;
-
-  color: #999999;
-
-  border-radius: 10px;
-
-  border: 2px solid #0aa5ff;
-
-  transition: 0.2s;
-
-}
-
-.log-in:hover {
-
-  background-color: #0aa5ff;
-
-  color: white;
-
-}
-
-.menu-btn {
-
-  font-size: 32px;
-
-  color: white;
-
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   display: none;
-
-  cursor: pointer;
-
 }
 
-@media (max-width: 53rem) {
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
 
-  .menu {
-
-    display: none;
-
-  }
-
-  .menu-btn {
-
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
     display: block;
-
   }
 
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+/* 
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+  height: 70px;
+  background: #ffffff;
+}
+
+/*
+.nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+*/
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
 }
