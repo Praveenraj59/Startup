@@ -7,7 +7,9 @@ $breakpoint determines at which width the media query breakpoint will take effec
   margin: auto;
 }
 body {
-  background-color: #63D6E0;
+  height: 100vh;
+  background:linear-gradient(to bottom, #ffffff ,#F0FFF0 30%);
+
 }
 nav {
   float: right;
@@ -162,3 +164,4 @@ nav ul li ul li a {
   color: #463f3f;
   text-decoration: none;
 }
+/*body*/

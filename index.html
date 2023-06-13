@@ -2,73 +2,97 @@
 
 <html lang="en">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Startup</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <section class="navigation">
-      <div class="nav-container">
-        <div class="brand">
-          <a href="#!">Logo</a>
-        </div>
-        <nav>
-          <div class="nav-mobile">
-            <a id="nav-toggle" href="#!"><span></span></a>
-          </div>
-          <ul class="nav-list">
-            <li>
-              <a href="#!">Home</a>
-            </li>
-            <li>
-              <a href="#!">About</a>
-            </li>
-            <li>
-              <a href="#!">Services</a>
-              <ul class="nav-dropdown">
-                <li>
-                  <a href="#!">Web Design</a>
-                </li>
-                <li>
-                  <a href="#!">Web Development</a>
-                </li>
-                <li>
-                  <a href="#!">Graphic Design</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#!">Pricing</a>
-            </li>
-            <li>
-              <a href="#!">Contact</a>
-            </li>
-          </ul>
-        </nav>
+  <title>Startup</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+    integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+  <script src="sc.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="slide.css">
+</head>
+
+<body>
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!">Logo</a>
       </div>
-    </section>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#!">About</a>
+          </li>
+          <li>
+            <a href="#!">Gallery</a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="#!">wedding</a>
+              </li>
+              <li>
+                <a href="#!">Birthday</a>
+              </li>
+              <li>
+                <a href="#!">........</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="booknow.html">Book Us Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 
-   <!-- div.elem-group.inlined input {
-        width: 95%;
-        display: inline-block;
-      }
+  <section>
+    <div class="swiper-container swiper-slider swiper-variant-1 bg-black" data-loop="false" data-autoplay="5500" data-simulate-touch="true">
+      <div class="swiper-wrapper text-center">
+        <div class="swiper-slide" data-slide-bg="places-01-1075.webp">
+          <div class="swiper-slide-caption text-center">
+            <div class="container">
+              <div class="row justify-content-md-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-slide-bg="places-01-1075.webp">
+          <div class="swiper-slide-caption text-center">
+            <div class="container">
+              <div class="row justify-content-md-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-slide-bg="images/home-slider-slide-3.jpg">
+          <div class="swiper-slide-caption text-center">
+            <div class="container">
+              <div class="row justify-content-md-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-scrollbar d-lg-none"></div>
+      <div class="swiper-nav-wrap">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
 
-      div.elem-group {
-        margin: 20px 0;
-      }
-      
-      div.elem-group.inlined {
-        width: 49%;
-        display: inline-block;
-        float: left;
-        margin-left: 1%;
-      }
-           --> 
-   
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
 
-  </body>
 </html>
