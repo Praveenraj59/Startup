@@ -46,11 +46,6 @@ $('.scren-owl').owlCarousel({
           nav:false,
           loop:true,
       },
-      1400:{
-          items:3,
-          nav:true,
-          loop:true,
-      }
   }
 
 })
